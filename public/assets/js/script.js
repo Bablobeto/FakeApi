@@ -155,8 +155,8 @@ function updateNotificationUI(alertData, matches) {
           <figcaption>${alert.prdTitle}</figcaption>
         </figure>
       </td>
-      <td align="center">${alert.prdPrice}</td>
       <td align="center">${alert.currentPrice}</td>
+      <td align="center">${alert.prdPrice}</td>
       <td align="center" class="${matchClass}" width="20%">
         ${alert.match ? "YES" : "NO"}
       </td>
