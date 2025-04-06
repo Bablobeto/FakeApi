@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "server.mjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest",
     "start:dev": "nodemon ./server.mjs",
     "start": "node ./server.mjs"
   },
@@ -20,5 +20,9 @@
     "lowdb": "^7.0.1",
     "nodemon": "^3.1.9"
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.1.0"
+  }
 }
