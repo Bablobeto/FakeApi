@@ -89,10 +89,10 @@
       <div class="categoryListing" id="categoryListing">
         <h2>Product Category</h2>
         <div class="items">
-          <% for (let index = 0; index < categories.length; index++) { %>
-            <div class="item" title="<%= categories[index] %>"
-              onclick="fetchCategoryProducts(`<%= categories[index] %>`)">
-              <div><%= categories[index] %></div>
+          <% for (let index = 0; index < categoriesFromFile.length; index++) { %>
+            <div class="item" title="<%= categoriesFromFile[index] %>"
+              onclick="fetchCategoryProducts(`<%= categoriesFromFile[index] %>`)">
+              <div><%= categoriesFromFile[index] %></div>
             </div>
           <% } %>
         </div>
@@ -101,7 +101,7 @@
       <!-- Initial Product List by Category -->
       <div class="categoryProductListing">
         <div class="items" id="productListingContainer">
-          <% firstCategoryProductList.forEach(product => { %>
+          <% productsFromFile.forEach(product => { %>
             <div class="item"
               onclick="setProductAlertAside(`<%= product.category %>`, `<%= product.title %>`, `<%= product.price %>`, `<%= product.id %>`, `<%= product.image %>`)">
               <img src="<%= product?.image || '../public/assets/image/default.png' %>"

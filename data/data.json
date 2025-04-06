@@ -9,7 +9,7 @@
     {
       "prdId": 99,
       "prdTitle": "Sample Product",
-      "prdImage": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
+      "prdImage": "https://example.com/image.png",
       "prdPrice": 20
     },
     {
@@ -29,6 +29,12 @@
       "prdTitle": "White Gold Plated Princess",
       "prdId": 7,
       "prdPrice": 3
+    },
+    {
+      "prdImage": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
+      "prdTitle": "Mens Cotton Jacket",
+      "prdId": 3,
+      "prdPrice": 12
     }
   ]
 }
