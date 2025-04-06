@@ -35,7 +35,7 @@ A simple and lightweight web application that allows users to set price alerts o
 
 ## Getting Started
 
-### 1. Clone the Repo
+### Installation & set up
 
 ```bash
 git clone https://github.com/Bablobeto/FakeApi.git fake-store
