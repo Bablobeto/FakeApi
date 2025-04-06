@@ -53,3 +53,5 @@ GET	/api/refresh-fake-store-api	Get evaluation of all alerts
 
 ## Test (TDD)
 - npm test
+
+## Screenshots

@@ -7,16 +7,28 @@
       "prdPrice": 12
     },
     {
-      "prdImage": "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
-      "prdTitle": "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
-      "prdId": 11,
-      "prdPrice": 11
-    },
-    {
       "prdId": 99,
       "prdTitle": "Sample Product",
-      "prdImage": "https://example.com/image.png",
+      "prdImage": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
       "prdPrice": 20
+    },
+    {
+      "prdImage": "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg",
+      "prdTitle": "Opna Women's Short Sleeve Moisture",
+      "prdId": 19,
+      "prdPrice": 12
+    },
+    {
+      "prdImage": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
+      "prdTitle": "Mens Casual Premium Slim Fit T-Shirts",
+      "prdId": 2,
+      "prdPrice": 1
+    },
+    {
+      "prdImage": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
+      "prdTitle": "White Gold Plated Princess",
+      "prdId": 7,
+      "prdPrice": 3
     }
   ]
 }
