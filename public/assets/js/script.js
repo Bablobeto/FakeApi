@@ -20,7 +20,6 @@ function fetchCategoryProducts(category = "electronics") {
   fetch(`/api/fetch-category-product?category=${encodeURIComponent(category)}`)
     .then((res) => res.json())
     .then((data) => {
-      console.log("Fetched products by category:", data);
       parseDataToUI(data);
     })
     .catch((error) => console.error("Error fetching category products:", error));
