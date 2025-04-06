@@ -13,11 +13,12 @@ A simple and lightweight web application that allows users to set price alerts o
 
 ## 📸 Features
 
-- 🔎 Browse products by category
-- 🔔 Set price alerts per product
-- ✅ View real-time price match status
-- 🌓 Light/Dark mode toggle
-- 💾 Data persistence via **LowDB** or browser **localStorage**
+- Browse products by category
+- Set price alerts per product
+- View real-time price match status
+- Light/Dark mode toggle
+- Data persistence via **LowDB** or browser **localStorage**
+- Run test with Jest | Supertest
 
 ---
 
@@ -49,3 +50,6 @@ GET	/	Render homepage with products
 GET	/api/fetch-category-product	Fetch products by category
 POST	/api/set-price-alert	Save a product price alert
 GET	/api/refresh-fake-store-api	Get evaluation of all alerts
+
+## Test (TDD)
+- npm test

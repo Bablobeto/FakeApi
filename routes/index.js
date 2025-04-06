@@ -1,5 +1,5 @@
 import express from "express";
-import { index, setPriceAlert, getCategoryProducts, refreshData } from "../controllers/ProductController.js";
+import { index, setPriceAlert, getCategoryProducts, refreshData } from "../controllers/FakeApiController.js";
 
 const route = express.Router();
 
