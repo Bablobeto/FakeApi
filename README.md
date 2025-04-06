@@ -56,7 +56,7 @@ GET	/api/refresh-fake-store-api	Get evaluation of all alerts
 
 ## Screenshots
 - Controller screenshot sample
-![alt text](https://github.com/Bablobeto/FakeApi/blob/develop/screenshots/Controller_interaction.png)
+![alt text](https://github.com/Bablobeto/FakeApi/blob/develop/screenshots/Controller_interaction.png?raw=true)
 
 - Notification sidebar and theming screenshot sample
 ![alt text](https://github.com/Bablobeto/FakeApi/blob/develop/screenshots/Notification_sidebar.png)
