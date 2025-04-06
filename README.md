@@ -57,9 +57,11 @@ GET	/api/refresh-fake-store-api	Get evaluation of all alerts
 ## Screenshots
 - Controller screenshot sample
 ![alt text](https://github.com/Bablobeto/FakeApi/blob/develop/screenshots/Controller_interaction.png)
+<img width="1511" alt="Image" src="https://github.com/user-attachments/assets/c790a0fb-1f05-40ab-a524-3c9a94be103f" />
 
 - Notification sidebar and theming screenshot sample
-![alt text](https://github.com/Bablobeto/FakeApi/blob/develop/screenshots/Notification_sidebar.png)
+<img width="1511" alt="Image" src="https://github.com/user-attachments/assets/b349df41-2146-482d-876b-b920465cf245" />
 
 - Product listing and category grouping screenshot sample
+<img width="1511" alt="Image" src="https://github.com/user-attachments/assets/315d414e-c331-4332-94bf-c3ec4a223a76" />
 ![alt text](https://github.com/Bablobeto/FakeApi/blob/develop/screenshots/Product_listing_notification_alert.png)
