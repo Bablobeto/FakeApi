@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-size: 16px;
+}
+
+main {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+
+/* Shared spacing */
+h1 {
+    font-size: 42px;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: normal;
+    font-style: italic;
+}
+
+#leftSide,
+#rightSide,
+#alertSettings {
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* 
+    Left side styles
+*/
+
+#alertSettings {
+    flex: 1;
+    overflow-y: hidden;
+    display: flex;
+    padding: 70px 0px;
+    flex-direction: column;
+    gap: 40px;
+    height: 100vh;
+    position: sticky;
+    overflow: hidden;
+    top: 0;
+}
+
+#leftSide {
+    flex: 1;
+    background: #EEE;
+    overflow-y: hidden;
+    display: flex;
+    padding: 70px 0px;
+    flex-direction: column;
+    gap: 40px;
+    height: 100vh;
+    position: sticky;
+    overflow: hidden;
+    top: 0;
+}
+
+#leftSide header,
+#alertSettings header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#leftSide div.item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-self: center;
+    align-items: center;
+    text-align: center;
+}
+
+#leftSide .item img {
+    width: 150px;
+    height: 137px;
+}
+
+#leftSide .item div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 70%;
+}
+
+#leftSide .item div span:nth-child(1) {
+    text-transform: capitalize;
+}
+
+.prefPrice {
+    margin-top: auto;
+}
+
+.prefPrice form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+#leftSide div.prefPrice form input {
+    height: 50px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+}
+
+#leftSide div.prefPrice form input[type="button"] {
+    width: 250px;
+    background: #000;
+    color: #FFF;
+    height: 50px;
+}
+
+/* 
+    Right side styles
+*/
+
+#rightSide {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    padding: 100px 40px;
+    align-items: center;
+    background: white;
+    overflow-y: auto;
+}
+
+#rightSide header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#rightSide header h1 {
+    font-weight: bold;
+}
+
+#rightSide header h3,
+#leftSide header h3 {
+    font-size: 16px;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.categoryListing {
+    width: auto;
+    min-height: 110px !important;
+    background: #EEE;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow-x: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#rightSide div.categoryListing div.items {
+    display: flex;
+    gap: 13px;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+#productListingContainer {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 13px;
+    cursor: pointer;
+}
+
+#rightSide div.categoryListing div.items div.item div {
+    text-transform: capitalize;
+    padding: 15px;
+    background: #8786867a;
+
+}   
+
+#rightSide div.categoryListing div.items div.item img,
+#rightSide div.categoryProductListing div.item img
+ { 
+    width: 150px;
+    height: 137px;
+    object-fit:cover;
+    background: transparent;
+}
+
+#rightSide div.categoryProductListing {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#rightSide div.categoryProductListing div.item {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+#rightSide div.categoryProductListing div.item div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    width: 180px;
+    padding: 13px 0px;
+}
+
+#rightSide div.categoryProductListing div.item div span:nth-child(1) {
+    text-transform: capitalize;
+}
+
+#rightSide div.categoryProductListing div.item div span:nth-child(2) {
+    flex: 1;
+}
+
+.notification {
+    position: fixed;
+    right: 80px;
+    top: 60px;
+    cursor: pointer;
+}
+
+.disp-0 {
+    display: none !important;
+}
+
+/* Transitions */
+body,
+#leftSide,
+#rightSide {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.item:hover {
+    transform: scale(1.02);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Dark mode styles */
+body.dark {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+body.dark #leftSide {
+    background-color: #1f1f1f;
+}
+
+body.dark #rightSide {
+    background-color: #181818;
+}
+
+body.dark .categoryListing {
+    background-color: #2a2a2a;
+}
+
+body.dark input[type="submit"] {
+    background-color: #f1f1f1;
+    color: #121212;
+}
+
+body.dark .notification svg {
+    stroke: #f1f1f1;
+}
+
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1000;
+    background: #eee;
+    color: #121212;
+    padding: 8px 12px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+body.dark .dark-mode-toggle {
+    background: #333;
+    color: #f1f1f1;
+}
+
+#alertSettings div {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    overflow-y: scroll;
+    min-height: 500px;
+}
+
+table {
+    margin-top: -20px;
+}
+
+table th {
+    padding: 10px 0px;
+}
+
+table tr td:nth-child(2) {
+    background: rgba(96, 96, 96, 0.189);
+}
+
+table tr td:nth-child(3) {
+    background: rgba(0, 128, 0, 0.208);
+}
+
+.success {
+    background: rgba(0, 128, 0, 0.208);
+}
+
+.error {
+    background: rgba(255, 0, 0, 0.276);
+}
+
+figure img {
+    width: 40px;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 770px) {
+    #leftSide {
+        display: none;
+    }
+
+    .categoryListing {
+        align-self: stretch !important;
+        align-items: normal !important;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {}

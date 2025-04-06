@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FakeStore - Welcome to the fake store api site</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+  <!-- Dark Mode Toggle -->
+  <div class="dark-mode-toggle" id="themeToggle">🌙 Dark</div>
+
+  <main>
+    <!-- Left Side: Price Alert Preferences -->
+    <aside id="leftSide">
+      <header>
+        <h1>Preferred Price<br />Alert Settings</h1>
+        <h3>Set your preferred price</h3>
+      </header>
+
+      <!-- Selected Product Preview -->
+      <div class="item">
+        <img id="asideImage" src="../assets/image/default.png" alt="Product Image" />
+        <div>
+          <span id="asideCategory"></span>
+          <span id="asideTitle"></span>
+          <span><span id="asidePrice"></span></span>
+        </div>
+      </div>
+
+      <!-- Price Alert Form -->
+      <div class="prefPrice">
+        <form id="form">
+          <label for="prefPrdPrice">Preferred price</label>
+          <input type="number" min="0" name="prefPrdId" id="prefPrdId" class="disp-0" />
+          <input type="number" min="0" name="prefPrdPrice" id="prefPrdPrice" placeholder="9.50" required />
+          <input type="button" value="Set Alarm" onclick="setPriceAlert()" />
+        </form>
+      </div>
+    </aside>
+
+    <!-- Middle Section: Price Comparison Table -->
+    <aside id="alertSettings" class="disp-0">
+      <header>
+        <h1>My Price<br />Alert Notifications</h1>
+        <h3>Ready to see how your desired prices compare</h3>
+      </header>
+      <hr />
+      <div style="text-align: center;">
+        <table width="100%">
+          <thead>
+            <tr>
+              <th colspan="4"><h2>Comparison Chart</h2></th>
+            </tr>
+            <tr>
+              <th>&nbsp;</th>
+              <th>Current Price <br />(£)</th>
+              <th>Desired Price <br />(£)</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </aside>
+
+    <!-- Right Side: Main Product Selection -->
+    <section id="rightSide">
+      <!-- Notification Icon with Match Counter -->
+      <div class="notification" id="notification">
+        <sup id="found">0 match found</sup>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+          stroke-width="1.5" stroke="currentColor" class="size-6" width="30px" height="30px">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0M3.124 7.5A8.969 8.969 0 0 1 5.292 3m13.416 0a8.969 8.969 0 0 1 2.168 4.5" />
+        </svg>
+        <sup id="alertCounter"><%= alertCounter %></sup>
+      </div>
+
+      <!-- Main Header -->
+      <header>
+        <h1>FakeStore</h1>
+        <h3>Select your product and get notified of price changes early</h3>
+      </header>
+
+      <!-- Category Listing -->
+      <div class="categoryListing" id="categoryListing">
+        <h2>Product Category</h2>
+        <div class="items">
+          <% for (let index = 0; index < categories.length; index++) { %>
+            <div class="item" title="<%= categories[index] %>"
+              onclick="fetchCategoryProducts(`<%= categories[index] %>`)">
+              <div><%= categories[index] %></div>
+            </div>
+          <% } %>
+        </div>
+      </div>
+
+      <!-- Initial Product List by Category -->
+      <div class="categoryProductListing">
+        <div class="items" id="productListingContainer">
+          <% firstCategoryProductList.forEach(product => { %>
+            <div class="item"
+              onclick="setProductAlertAside(`<%= product.category %>`, `<%= product.title %>`, `<%= product.price %>`, `<%= product.id %>`, `<%= product.image %>`)">
+              <img src="<%= product?.image || '../public/assets/image/default.png' %>"
+                alt="<%= product.title %>" />
+              <div>
+                <span><%= product.category %></span>
+                <span><%= product.title %></span>
+                <span>£ <%= product.price %></span>
+              </div>
+            </div>
+          <% }) %>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <p>Copyright &copy; 2025. All rights reserved</p>
+    </section>
+  </main>
+
+  <script src="../assets/js/script.js"></script>
+</body>
+
+</html>
