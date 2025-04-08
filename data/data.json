@@ -35,6 +35,18 @@
       "prdTitle": "Mens Cotton Jacket",
       "prdId": 3,
       "prdPrice": 12
+    },
+    {
+      "prdImage": "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
+      "prdTitle": "Pierced Owl Rose Gold Plated Stainless Steel Double",
+      "prdId": 8,
+      "prdPrice": 10.99
+    },
+    {
+      "prdImage": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
+      "prdTitle": "Mens Casual Slim Fit",
+      "prdId": 4,
+      "prdPrice": 8
     }
   ]
 }

@@ -2,6 +2,7 @@ import axios from "axios";
 import { readFile, writeFile } from "fs/promises";
 import path from "path";
 import { db } from "../data/lowdbInstance.js";
+import logger from "../logger.js";
 
 const DATA_FILE = path.join(process.cwd(), "data/fakeData.json");
 const DATA_FILE_CATEGORIES = path.join(
@@ -30,6 +31,7 @@ export async function index(req, res, next) {
       alertCounter,
     });
   } catch (err) {
+    logger.info('Error launching the application',{color: 'red' });
     next(err);
   }
 }
@@ -55,6 +57,7 @@ export async function setPriceAlert(req, res, next) {
       total: db.data.preferences.length,
     });
   } catch (error) {
+    logger.info('Error setting price alert',{color: 'red' });
     next(error);
   }
 }
@@ -103,7 +106,7 @@ export async function refreshData(req, res) {
       res.json({ evaluation, matches });
     }
   } catch (err) {
-    console.log("Error refreshing data");
+    logger.info('Error refreshing data',{color: 'red' });
   }
 }
 
